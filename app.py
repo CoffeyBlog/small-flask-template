@@ -7,9 +7,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    mylist = [1,2,3,4,5]
-    return render_template('header.html', mylist=mylist)
+    return render_template("home.html")
+
+
+@app.route('/')
+def base():
+    return render_template("base.html")
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
